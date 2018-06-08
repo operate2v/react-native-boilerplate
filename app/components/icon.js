@@ -1,14 +1,4 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import Rocket from 'react-native-vector-icons/FontAwesome';
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
+import icoMoonConfig from 'assets/fonts/icon_font/selection.json';
 
-export default class Icon extends Component {
-  state = {};
-  render() {
-    return (
-      <View>
-        <Rocket name="rocket" size={30} color="#900" />
-      </View>
-    );
-  }
-}
+export default createIconSetFromIcoMoon(icoMoonConfig, 'icomoon', 'icomoon.ttf');

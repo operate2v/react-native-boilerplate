@@ -41,12 +41,16 @@ export default class Avatar extends Component {
         {this.state.loading ? (
           <LoadingImage size={this.props.size} source={require('assets/images/default.png')} />
         ) : null}
-        <AvatarImage
-          size={this.props.size}
-          onLoadStart={() => this.setState({ loading: true })}
-          onLoadEnd={() => (this.props.uri !== null ? this.setState({ loading: false }) : null)}
-          source={{ uri: this.props.uri }}
-        />
+        {this.props.uri ? (
+          <AvatarImage
+            size={this.props.size}
+            onLoadStart={() => this.setState({ loading: true })}
+            onLoadEnd={() => this.setState({ loading: false })}
+            source={{ uri: this.props.uri }}
+          />
+        ) : (
+          <LoadingImage size={this.props.size} source={require('assets/images/default.png')} />
+        )}
       </AvatarContainer>
     );
   }

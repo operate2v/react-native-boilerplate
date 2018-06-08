@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Text, AsyncStorage } from 'react-native';
-import ScreenView from 'components/screen_view';
+import { ScreenView } from 'components/commons';
 import { routes } from 'constants';
 
-/**
- * SplashScreen BackgroundColor 와 동일한 색상으로
- * 통일하도록 구현
- */
 export default class Loading extends Component {
   state = {};
 

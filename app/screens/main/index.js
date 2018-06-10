@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
 import Header from 'components/header/header';
 import Avatar from 'components/avatar';
-import { Text, Divider, ScreenView, SubmitButton } from 'components/commons';
+import { Divider, ScreenView, SubmitButton } from 'components/commons';
 import RadioGroup from 'components/radio_group/radio_group';
+import MyCheckBox from 'components/my_check_box';
 
 const MainContainer = styled(ScreenView)`
   align-items: center;
 `;
 
 export default class Main extends Component {
-  state = {};
+  state = {
+    test: false,
+  };
+
+  onClick = () => {
+    this.setState({ test: !this.state.test });
+  };
+
   render() {
     const botImage = 'https://robohash.org/123125123.png';
     const genderList = [
@@ -32,7 +40,11 @@ export default class Main extends Component {
         <View style={{ marginTop: 15 }} width="100%">
           <SubmitButton text="전송" onPressButton={() => console.log('sibal')} />
         </View>
-        <RadioGroup data={genderList} onSelectRadioButton={() => console.log('sibal')} />
+        <View style={{ alignItems: 'center', marginTop: 15 }} width="100%">
+          <RadioGroup data={genderList} onSelectRadioButton={() => console.log('sibal')} />
+        </View>
+        <Divider isMarginVertical />
+        <MyCheckBox text="sibaloma" onPressCheckBox={() => console.log('as')} />
       </MainContainer>
     );
   }

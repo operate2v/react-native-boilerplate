@@ -63,7 +63,11 @@ class Header extends React.Component {
     } else if (this.props.centerComponent) {
       component = this.props.centerComponent;
     } else {
-      component = <TitleText type="eng">{this.props.title}</TitleText>;
+      component = (
+        <TitleText type="eng" isScale={false}>
+          {this.props.title}
+        </TitleText>
+      );
     }
     return component;
   };

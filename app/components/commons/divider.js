@@ -8,7 +8,7 @@ const Divider = styled.View`
   height: ${StyleSheet.hairlineWidth};
   background-color: ${colors.linegray};
   align-self: center;
-  margin-vertical: ${props => (props.isMarginVertical ? 4 : 0)}
+  margin-vertical: ${props => (props.isMarginVertical ? 12 : 0)}
 `;
 
 export default Divider;

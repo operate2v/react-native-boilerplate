@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Keyboard } from 'react-native';
 import styled from 'styled-components/native';
-import Icon from 'components/icon';
-import Text from 'components/app_text';
+import { Icon, Text } from 'components/commons';
 import { colors } from 'constants';
 import ScaleWidth from 'utils/scale_width';
 

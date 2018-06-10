@@ -6,6 +6,8 @@ import Avatar from 'components/avatar';
 import { Divider, ScreenView, SubmitButton } from 'components/commons';
 import RadioGroup from 'components/radio_group/radio_group';
 import MyCheckBox from 'components/my_check_box';
+// import { Rating, AirbnbRating } from 'react-native-ratings';
+import RatingStar from 'components/rating_star';
 
 const MainContainer = styled(ScreenView)`
   align-items: center;
@@ -45,6 +47,7 @@ export default class Main extends Component {
         </View>
         <Divider isMarginVertical />
         <MyCheckBox text="sibaloma" onPressCheckBox={() => console.log('as')} />
+        <RatingStar onFinishRating={() => {}} />
       </MainContainer>
     );
   }
